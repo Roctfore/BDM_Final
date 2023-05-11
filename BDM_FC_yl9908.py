@@ -4,7 +4,7 @@ from datetime import datetime
 from pyspark import SparkConf, SparkContext
 
 # Set up Spark configuration and context
-conf = SparkConf().setAppName("BDM_FC_hg2683")
+conf = SparkConf().setAppName("BDM_FC_yl9908")
 sc = pyspark.SparkContext.getOrCreate()
 output_folder = sys.argv[1]
 
