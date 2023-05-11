@@ -9,9 +9,9 @@ sc = pyspark.SparkContext.getOrCreate()
 output_folder = sys.argv[1]
 
 # Load data
-supermarket = sc.textFile('/shared/CUSP-GX-6002/FC/yl9908/nyc_supermarkets.csv')
+supermarket = sc.textFile('/home/yl9908_nyu_edu/BDM_Final/nyc_supermarkets.csv')
 weekly_patterns = sc.textFile('/shared/CUSP-GX-6002/data/weekly-patterns-nyc-2019-2020/*')
-nyc_cbg_centroids = sc.textFile('/shared/CUSP-GX-6002/FC/yl9908/nyc_cbg_centroids.csv')
+nyc_cbg_centroids = sc.textFile('/home/yl9908_nyu_edu/BDM_Final/nyc_cbg_centroids.csv')
 
 # Convert to RDD
 def parse_csv(line):
