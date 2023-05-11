@@ -15,8 +15,8 @@ import math
 
 def load_and_process_data(spark, output_dir):
     # Load data
-    supermarket = spark.read.csv('nyc_supermarkets.csv', header=True, inferSchema=True)
-    nyc_cbg_centroids = spark.read.csv('nyc_cbg_centroids.csv', header=True, inferSchema=True)
+    supermarket = spark.read.csv('/shared/CUSP-GX-6002/FC/yl9908/nyc_supermarkets.csv', header=True, inferSchema=True)
+    nyc_cbg_centroids = spark.read.csv('/shared/CUSP-GX-6002/FC/yl9908/nyc_cbg_centroids.csv', header=True, inferSchema=True)
     weekly_patterns = spark.read.csv('/shared/CUSP-GX-6002/data/weekly-patterns-nyc-2019-2020/part-*', header=True, inferSchema=True)
 
     # 1. Use nyc_supermarkets.csv to filter the visits in the weekly patterns data ( safegraph_placekey column which matches the placekey column in the Weekly Pattern dataset)
